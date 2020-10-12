@@ -18,8 +18,8 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <script type="text/javascript">
-    var socket = io('http://localhost:3000');
+  <script type="text/javascript">    
+    var socket = io('http://localhost:' + <%= port %>);
 
     function renderMessage(message) {
       $('.messages').append('<div class="message"><strong>' + message.author + '</strong>: ' + message.message + '</div>');
@@ -43,7 +43,7 @@
       
       if(author.length != 0 && message.lenght != 0) {
         var messageObject = {
-	  author: author,
+	        author: author,
           message: message
         };
         
