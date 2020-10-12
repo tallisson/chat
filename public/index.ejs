@@ -19,7 +19,7 @@
   </form>
 
   <script type="text/javascript"> 
-    const url = 'http://localhost:' + <%= port %>;  
+    const url = location.href;  
     var socket = io(url);
 
     function renderMessage(message) {
