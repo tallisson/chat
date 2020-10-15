@@ -69,6 +69,8 @@
 
         renderizarMensagem(objetoMensagem);
         socket.emit('enviarMensagem', objetoMensagem);
+
+        document.querySelector('input[name=mensagem]').value = '';
       }
     }
   </script>
